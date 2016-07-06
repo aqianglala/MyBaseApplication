@@ -1,10 +1,10 @@
 package com.example.qiang.myhttp.Base;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
-import com.example.qiang.myhttp.R;
 import com.example.qiang.myhttp.utils.LogUtils;
 
 import butterknife.ButterKnife;
@@ -14,7 +14,7 @@ import butterknife.ButterKnife;
  * Activity的基类
  * Created by Administrator on 2015/6/2.
  */
-public abstract class BaseActivity extends FragmentActivity {
+public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
 
     public String TAG;
     protected BaseActivity context;
@@ -29,8 +29,6 @@ public abstract class BaseActivity extends FragmentActivity {
         TAG = this.getClass().getSimpleName();
 
         initContentView();
-        // 设置状态栏颜色
-//        StatusBarUtils.setColor(this, getResources().getColor(R.color.colorPrimary));
         initialize();
         initListener();
     }
@@ -45,7 +43,6 @@ public abstract class BaseActivity extends FragmentActivity {
      * 3.设置默认文字颜色
      */
     protected void initContentView() {
-        setTheme(R.style.theme_NoTitleBar);
         setContentView(getContentView());
     }
 
@@ -66,7 +63,10 @@ public abstract class BaseActivity extends FragmentActivity {
         super.onDestroy();
     }
 
+    @Override
+    public void onClick(View v) {
 
+    }
 
     protected FragmentTransaction transaction;
 

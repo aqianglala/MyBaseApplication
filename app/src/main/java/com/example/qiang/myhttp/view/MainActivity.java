@@ -1,9 +1,10 @@
 package com.example.qiang.myhttp.view;
 
-import com.example.qiang.myhttp.Base.TitleBaseActivity;
+import com.example.qiang.myhttp.Base.BaseActivity;
 import com.example.qiang.myhttp.R;
 
-public class MainActivity extends TitleBaseActivity {
+public class MainActivity extends BaseActivity {
+
 
     @Override
     protected int getContentView() {
