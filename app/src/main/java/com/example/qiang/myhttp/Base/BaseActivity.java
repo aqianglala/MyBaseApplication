@@ -30,11 +30,13 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
         initContentView();
         initialize();
+        initView();
         initListener();
     }
 
-    protected void initListener() {
-    }
+    protected void initView(){}
+
+    protected void initListener() {}
 
     /**
      * 初始化界面
